@@ -9,6 +9,8 @@ Testing different Machine Learning models for _Spam-Ham_ Classification
 
 _The following explaination tries to give an intution behind the working of a given model without dwelling into any mathematical rigour_
 
+<hr>
+
 ### Logistic Regression
 
 Logistic Regression is a type of classification algorithm involving a *linear discriminant*.
@@ -37,6 +39,8 @@ Consider a point **(a, b)**. Plugging the values of  x1 and x2 into the boundary
 
 to change the boundry from (-∞,+∞ ) to [0.1] , we use a sigmoid function (or log-odds function).
 
+<hr>
+
 ### Decision Tree
 
 Decision Tree algorithm belongs to the family of **supervised learning** algorithms. Unlike other supervised learning algorithms, decision tree algorithm can be used for solving regression and **classification** problems too.
@@ -58,3 +62,36 @@ Decision Tree Algorithm Pseudocode
 In decision trees, for predicting a class label for a record we start from the root of the tree. We compare the values of the root attribute with record’s attribute. On the basis of comparison, we follow the branch corresponding to that value and jump to the next node.
 
 We continue comparing our record’s attribute values with other internal nodes of the tree until we reach a leaf node with predicted class value. As we know how the modeled decision tree can be used to predict the target class or the value. Now let’s understanding how we can create the decision tree model.
+
+<hr>
+
+### Naive Bayes
+
+ 		
+The Naive Bayesian classifier is based on Bayes’ theorem with the independence assumptions between predictors. A Naive Bayesian model is easy to build, with no complicated iterative parameter estimation which makes it particularly useful for very large datasets. Despite its simplicity, the Naive Bayesian classifier often does surprisingly well and is widely used because it often outperforms more sophisticated classification methods. 
+
+Bayes theorem provides a way of calculating the posterior probability, *P(c|x)*, from *P(c)*, *P(x)*, and *P(x|c)*. Naive Bayes classifier assume that the effect of the value of a predictor (x) on a given class (c) is independent of the values of other predictors. This assumption is called class conditional independence.
+
+<p align="center">
+  <img src="https://i.stack.imgur.com/BzMwG.png" title="Bayes Thm">
+</p>
+
+Where
+
+  *  P(c|x) is the posterior probability of class (target) given predictor (attribute). 
+  *  P(c) is the prior probability of class. 
+  *  P(x|c) is the likelihood which is the probability of predictor given class. 
+  *  P(x) is the prior probability of predictor.
+
+<hr>
+
+### SVC
+
+“Support Vector Machine” (SVM) is a supervised machine learning algorithm which can be used for both classification or regression challenges. However,  it is mostly used in classification problems. In this algorithm, we plot each data item as a point in n-dimensional space (where n is number of features you have) with the value of each feature being the value of a particular coordinate. Then, we perform classification by finding the hyper-plane that differentiate the two classes very well (look at the below snapshot).
+
+
+<p align="center">
+  <img src="https://i.stack.imgur.com/KgIs2.png" title="SVC">
+</p>
+
+Support Vectors are simply the co-ordinates of individual observation. Support Vector Machine is a frontier which best segregates the two classes (hyper-plane/ line).
